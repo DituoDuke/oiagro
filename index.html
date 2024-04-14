@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="Tip_fish.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tip Fish</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="menu">
+            <div class="container-barra ">
+                <div class="barra-pesquisa">
+                    <label id="label-pesquisa" for="pesquisa">Procurar Peixes</label>
+                    <input type="search" id="pesquisa" placeholder="Pesquise por nome do peixe ou região" oninput="update()" data-pesq>
+                </div>
+            </div>
+        </div>
+        <div class="container-radio">
+            <input type="radio" class="agua" id="doce" name="agua" value="doce" onclick="radioUpdate(), update()">
+            <label for="doce" class="label-radio">Água doce</label>
+            <input type="radio" class="agua" id="salgada" name="agua" value="salgada" onclick="radioUpdate(), update()">
+            <label for="salgada" class="label-radio">Água salgada</label>
+            <input type="radio" class="agua" id="ambas" name="agua" value="ambas" onclick="radioUpdate(), update()" checked>
+            <label for="ambas" class="label-radio">Ambas</label>
+        </div>
+        
+        
+
+        <div class="ccount">
+            <div class="cccount">
+                <div class="container-peixe">
+                    <div class="c-peixes" data-peixe-caixa-container></div>
+                    <template data-peixe-template>
+                        <div class="peixe">
+                            <div class="nome" data-nome></div>
+                            <div class="loc" data-loc></div>
+                            <div class="agua" data-agua></div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+        
+            
+    </body>
+</html>
