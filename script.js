@@ -28,7 +28,7 @@ function addTemplateClickEvents() {
         template.addEventListener('click', () => {
             const peixeNome = template.dataset.peixeNome
             
-            window.location.href = 'peixes.php?peixe=' + peixeNome
+            window.location.href = 'peixes.html?peixe=' + peixeNome
         })
     })
 }
